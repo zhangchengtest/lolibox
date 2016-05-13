@@ -18,7 +18,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         if ("filesystem".equals(storageType))
             registry.addResourceHandler("/images/**").addResourceLocations(
-                    imgFolder);
+                    "file:" + imgFolder);
     }
 
 }
